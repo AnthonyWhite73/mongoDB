@@ -1,5 +1,5 @@
 const connection = require("./db/connection");
-const {addMovie, listMovies, deleteMovie} = require("./utils");
+const {addMovie, listMovies, deleteMovie, updateMovie} = require("./utils");
 
 
 const command = process.argv[2];

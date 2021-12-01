@@ -10,7 +10,7 @@ const connection = async (crudFunc, dataObj) => {
         console.log("connection successful");
         const db = client.db("newTestDb");
         const collection = db.collection("movies");
-        await crudFunc(collection, dataObj);
+        await crudFunc(collection, dataObj);        
         client.close();
     }catch (error) {
         console.log(error);
