@@ -1,5 +1,5 @@
 const connection = require("./db/connection");
-const {addMovie, listMovies} = require("./utils");
+const {addMovie, listMovies, deleteMovie} = require("./utils");
 
 
 const command = process.argv[2];
@@ -16,9 +16,8 @@ const app = async () => {
         await connection(listMovies);
     } else if (command === "update"){
         // update
-    } else if (command === "delete"){
-        //delete
-        
+    } else if (command === "delete"){                
+        await connection(deleteMovie);
     } else {
         console.log("Incorrect Input")
     }
